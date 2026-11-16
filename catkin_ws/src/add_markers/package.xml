@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>add_markers</name>
+  <version>1.0.0</version>
+  <description>Displays the virtual object at pickup and drop-off using move_base arrival events.</description>
+
+  <maintainer email="ubuntu@todo.todo">ubuntu</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>visualization_msgs</build_depend>
+
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <build_export_depend>visualization_msgs</build_export_depend>
+
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>visualization_msgs</exec_depend>
+  <exec_depend>my_robot</exec_depend>
+  <exec_depend>pick_objects</exec_depend>
+
+  <export/>
+</package>

@@ -1,0 +1,16 @@
+# All points are in the map frame and were checked against the supplied office world.
+pickup_x: -10.0
+pickup_y: -4.0
+pickup_yaw: 3.141592653589793
+
+dropoff_x: -5.0
+dropoff_y: 3.0
+dropoff_yaw: 1.5707963267948966
+
+pickup_wait_seconds: 5.0
+goal_timeout_seconds: 180.0
+retry_pause_seconds: 2.0
+goal_attempts: 3
+
+marker_frame: map
+marker_scale: 0.40

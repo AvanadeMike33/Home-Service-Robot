@@ -1,0 +1,25 @@
+<launch>
+  <arg name="rviz" default="true"/>
+  <arg name="map_file" default="$(find my_robot)/maps/map.yaml"/>
+  <arg name="x" default="-5.0"/>
+  <arg name="y" default="-4.0"/>
+  <arg name="yaw" default="0.0"/>
+
+  <include file="$(find my_robot)/launch/test_navigation.launch">
+    <arg name="rviz" value="$(arg rviz)"/>
+    <arg name="map_file" value="$(arg map_file)"/>
+    <arg name="x" value="$(arg x)"/>
+    <arg name="y" value="$(arg y)"/>
+    <arg name="yaw" value="$(arg yaw)"/>
+  </include>
+
+  <node pkg="add_markers" type="add_markers_node" name="add_markers"
+        output="screen" required="true">
+    <rosparam command="load" file="$(find my_robot)/config/home_service_goals.yaml"/>
+  </node>
+
+  <node pkg="pick_objects" type="pick_objects_node" name="pick_objects"
+        output="screen" required="true">
+    <rosparam command="load" file="$(find my_robot)/config/home_service_goals.yaml"/>
+  </node>
+</launch>
